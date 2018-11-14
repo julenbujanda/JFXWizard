@@ -19,7 +19,7 @@ public class WizardController {
     private Label countLabel;
 
     public void initialize() {
-        showSlide = 0;
+        firstPane();
     }
 
     public void translateAnimation(Node node, double byX) {
@@ -41,8 +41,9 @@ public class WizardController {
                 showSlide++;
                 countLabel.setText("3/3");
                 break;
-            default:
-                System.out.println("No more slides.");
+            case 2:
+                firstPane();
+                countLabel.setText("1/3");
         }
     }
 
@@ -50,19 +51,32 @@ public class WizardController {
     public void backAction() {
         switch (showSlide) {
             case 0:
-                System.out.println("No more slides.");
+                lastPane();
+                countLabel.setText("3/3");
                 break;
             case 1:
-                translateAnimation(pane1, PANE_WIDTH);
+                translateAnimation(pane2, PANE_WIDTH);
                 showSlide--;
                 countLabel.setText("1/3");
                 break;
             case 2:
-                translateAnimation(pane2, PANE_WIDTH);
+                translateAnimation(pane3, PANE_WIDTH);
                 showSlide--;
                 countLabel.setText("2/3");
                 break;
         }
+    }
+
+    private void firstPane() {
+        showSlide = 0;
+        translateAnimation(pane3, 600);
+        translateAnimation(pane2, 600);
+    }
+
+    private void lastPane() {
+        showSlide = 2;
+        translateAnimation(pane2, -600);
+        translateAnimation(pane3, -600);
     }
 
 }
