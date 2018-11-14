@@ -1,10 +1,11 @@
-.principal {
-
+AnchorPane {
+    /*-fx-background-radius: 30;*/
 }
 
 .title {
     -fx-font-size: 24px;
     -fx-text-fill: #fff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0.0, 0.0);
 }
 
 .description {
