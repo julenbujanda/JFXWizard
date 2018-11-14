@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -57,5 +58,13 @@
       <JFXButton layoutX="68.0" layoutY="519.0" onAction="#backAction" prefHeight="50.0" prefWidth="50.0" styleClass="nextButton" text="&lt;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" />
       <JFXButton layoutX="371.0" layoutY="519.0" onAction="#nextAction" prefHeight="50.0" prefWidth="50.0" styleClass="nextButton" text="&gt;" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0" />
       <Label fx:id="countLabel" layoutX="227.0" layoutY="536.0" styleClass="position" text="1/3" />
+       <ImageView fx:id="closeButton" fitHeight="22.0" fitWidth="25.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="closeButton" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+       <image>
+           <Image url="@../img/exit.png" />
+       </image>
+       <cursor>
+           <Cursor fx:constant="HAND" />
+       </cursor>
+   </ImageView>
    </children>
 </AnchorPane>

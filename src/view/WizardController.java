@@ -4,7 +4,9 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class WizardController {
@@ -14,6 +16,9 @@ public class WizardController {
     private int showSlide;
     @FXML
     private AnchorPane pane1, pane2, pane3;
+
+    @FXML
+    private ImageView closeButton;
 
     @FXML
     private Label countLabel;
@@ -65,6 +70,11 @@ public class WizardController {
                 countLabel.setText("2/3");
                 break;
         }
+    }
+
+    @FXML
+    public void close() {
+        ((Stage) closeButton.getScene().getWindow()).close();
     }
 
     private void firstPane() {
