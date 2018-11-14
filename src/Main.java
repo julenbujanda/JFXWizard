@@ -18,7 +18,7 @@ public class Main extends Application {
         primaryStage.setTitle("Sign Up");
         primaryStage.getIcons().add(new Image("img/keyboard.png"));
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(new Scene(root, 900, 500));
+        primaryStage.setScene(new Scene(root, 480, 600));
         primaryStage.show();
     }
 
