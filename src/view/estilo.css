@@ -26,13 +26,17 @@ AnchorPane {
 }
 
 .pane1 {
-    -fx-background-color: #00b3ff;
+    -fx-background-color: #E91E63;
 }
 
 .pane2 {
-    -fx-background-color: #00ffab;
+    -fx-background-color: #42A5F5;
 }
 
 .pane3 {
-    -fx-background-color: #ffe100;
+    -fx-background-color: #512DA8;
+}
+
+.closeButton{
+    -fx-effect: dropshadow(gaussian, white, 10, 0.5, 0.0, 0.0);
 }
