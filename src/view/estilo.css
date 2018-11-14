@@ -1,5 +1,5 @@
 .principal {
-    -fx-background-color: #00b3ff;
+
 }
 
 .title {
@@ -12,7 +12,7 @@
     -fx-text-fill: #fff;
 }
 
-.nextButton{
+.nextButton {
     -fx-background-color: #00000020;
     -fx-background-radius: 50px;
     -fx-text-fill: #fff;
@@ -22,4 +22,16 @@
 .position {
     -fx-text-fill: #fff;
     -fx-font-size: 18px;
+}
+
+.pane1 {
+    -fx-background-color: #00b3ff;
+}
+
+.pane2 {
+    -fx-background-color: #00ffab;
+}
+
+.pane3 {
+    -fx-background-color: #ffe100;
 }
