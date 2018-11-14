@@ -1,3 +1,25 @@
 .principal {
     -fx-background-color: #00b3ff;
 }
+
+.title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #fff;
+}
+
+.description {
+    -fx-font-size: 16px;
+    -fx-text-fill: #fff;
+}
+
+.nextButton{
+    -fx-background-color: #00000020;
+    -fx-background-radius: 50px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 21px;
+}
+
+.position {
+    -fx-text-fill: #fff;
+    -fx-font-size: 18px;
+}
