@@ -31,7 +31,7 @@
                        <Label alignment="CENTER" styleClass="title" text="Título 1" textAlignment="CENTER" />
                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                               <Image url="@../img/mobile-phone.png" />
+                               <Image url="@../img/thumbs-up.png" />
                            </image>
                        </ImageView>
                        <Label styleClass="description" text="Descripción" />
@@ -46,7 +46,7 @@
                        <Label alignment="CENTER" styleClass="title" text="Título 1" textAlignment="CENTER" />
                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                               <Image url="@../img/mobile-phone.png" />
+                               <Image url="@../img/keyboard.png" />
                            </image>
                        </ImageView>
                        <Label styleClass="description" text="Descripción" />
