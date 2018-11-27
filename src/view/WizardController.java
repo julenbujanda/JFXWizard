@@ -9,6 +9,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+/**
+ * Controlador de Wizard.fxml
+ * @author Julen Bujanda
+ */
 public class WizardController {
 
     private final int PANE_WIDTH = 600;
@@ -27,12 +31,20 @@ public class WizardController {
         firstPane();
     }
 
-    public void translateAnimation(Node node, double byX) {
-        TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(TRANSITION_DURATION), node);
+    /**
+     * Desliza el panel deseado
+     * @param pane Pane que se desea mover
+     * @param byX Distancia horizontal que se deslizará
+     */
+    private void translateAnimation(Node pane, double byX) {
+        TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(TRANSITION_DURATION), pane);
         translateTransition.setByX(byX);
         translateTransition.play();
     }
 
+    /**
+     * Se ejecuta al hacer click en el botón de siguiente
+     */
     @FXML
     public void nextAction() {
         switch (showSlide) {
@@ -52,6 +64,9 @@ public class WizardController {
         }
     }
 
+    /**
+     * Se ejecuta al hacer click en el botón de anterior
+     */
     @FXML
     public void backAction() {
         switch (showSlide) {
@@ -72,17 +87,28 @@ public class WizardController {
         }
     }
 
+    /**
+     * Cierra la ventana, se ejecuta desde el botón de salir
+     */
     @FXML
     public void close() {
         ((Stage) closeButton.getScene().getWindow()).close();
     }
 
+    /**
+     * Muestra el primer panel, es llamado cuando se hace click en siguiente
+     * estando en el último panel
+     */
     private void firstPane() {
         showSlide = 0;
         translateAnimation(pane3, 600);
         translateAnimation(pane2, 600);
     }
 
+    /**
+     * Muestra el último panel, se ejecuta al hacer click en anterior en
+     * el primer panel
+     */
     private void lastPane() {
         showSlide = 2;
         translateAnimation(pane2, -600);
